@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:CarouselPageNavigation"
+              x:Class="CarouselPageNavigation.MainPage"
+       
+             >
+
+
+    <CarouselPage.ItemTemplate  >
+        <DataTemplate >
+                
+                <ContentPage >
+
+                <ContentPage.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, Android" Value="0,40,0,0" />
+                        </OnPlatform>
+                    </ContentPage.Padding>
+                <StackLayout>
+                        <Label Text="Hello" FontSize="Medium" HorizontalOptions="Center" />
+
+                    <Image BackgroundColor="{Binding Colores}" Source="{Binding ImageSource}" />
+
+                  
+                </StackLayout>
+                </ContentPage>
+            </DataTemplate>
+        </CarouselPage.ItemTemplate>
+     
+    
+  
+</CarouselPage>
